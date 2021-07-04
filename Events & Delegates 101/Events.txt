@@ -1,0 +1,7 @@
+Events
+-------------------
+[] A mechanism for comunication between objects:
+    - When something happens inside an object it can notify other objects about that.
+
+[] Used in building Loosely Coupled Applications
+[] Helps extending applications
