@@ -12,8 +12,10 @@ namespace EventsAndDelegates
             var video = new Video() { Title = "Video Title" };
             var videoEncoder = new VideoEncoder(); // Publisher
             var mailService = new MailService(); // Subscriber
+            var txtNotificationService = new TxtNotificationService(); // Subscriber
 
             videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
+            videoEncoder.VideoEncoded += txtNotificationService.OnVideoEncoded;
             videoEncoder.Encode(video);
         }
     }

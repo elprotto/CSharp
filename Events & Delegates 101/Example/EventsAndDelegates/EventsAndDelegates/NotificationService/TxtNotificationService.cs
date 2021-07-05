@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace EventsAndDelegates.NotificationService
 {
-    public class MailService
+    public class TxtNotificationService
     {
         public void OnVideoEncoded(object source, VideoEventArgs args)
         {
-            Console.WriteLine("MailService: Sending an email notification..." + args.Video.Title);
+            Console.WriteLine("TxtNotificationService: Sending an text notification..." + args.Video.Title);
             Thread.Sleep(2000);
         }
     }
