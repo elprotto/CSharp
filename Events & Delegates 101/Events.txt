@@ -3,5 +3,9 @@ Events
 [] A mechanism for comunication between objects:
     - When something happens inside an object it can notify other objects about that.
 
-[] Used in building Loosely Coupled Applications
-[] Helps extending applications
+[] Used in building Loosely Coupled Applications.
+[] Helps extending applications.
+
+1- Define a delegate.
+2- Define an event based on that delegate.
+3- Raise the event.

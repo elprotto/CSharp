@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EventsAndDelegates.Encoders;
+using EventsAndDelegates.Models;
+using EventsAndDelegates.NotificationService;
+using System;
 
 namespace EventsAndDelegates
 {
@@ -6,7 +9,12 @@ namespace EventsAndDelegates
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var video = new Video() { Title = "Video Title" };
+            var videoEncoder = new VideoEncoder(); // Publisher
+            var mailService = new MailService(); // Subscriber
+
+            videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
+            videoEncoder.Encode(video);
         }
     }
 }
