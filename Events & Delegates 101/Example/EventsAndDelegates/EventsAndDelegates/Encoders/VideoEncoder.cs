@@ -6,9 +6,11 @@ namespace EventsAndDelegates.Encoders
 {
     public class VideoEncoder
     {
-        public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+        //public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
 
-        public event VideoEncodedEventHandler VideoEncoded;
+        //public event VideoEncodedEventHandler VideoEncoded;
+
+        public event EventHandler<VideoEventArgs> VideoEncoded;
         public void Encode(Video video)
         {
             Console.WriteLine("Encoding video...");
